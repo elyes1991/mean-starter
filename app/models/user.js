@@ -5,7 +5,7 @@ var bcrypt = require('bcrypt-nodejs');
 
 
 //connect to local database
-db = mongoose.createConnection('mongodb://localhost/localdb');
+db = mongoose.createConnection('mongodb://mongo:27017/localdb');
 
 //user schema
 var UserSchema = new Schema({

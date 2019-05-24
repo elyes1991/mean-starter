@@ -5,14 +5,14 @@ var app = express();    // define our app using express
 var bodyParser = require('body-parser'); // get body parser
 var morgan = require('morgan'); // used to see requests
 var mongoose = require('mongoose'); // for working with our database
-var port = process.env.PORT || 8080; // setting up the port for our app
+var port = process.env.PORT || 3000; // setting up the port for our app
 var User = require('./app/models/user.js');
 var jwt = require('jsonwebtoken');
 var superSecret = 'hellomrelyesbacha';
 
 
 //connect to local database
-db = mongoose.createConnection('mongodb://localhost/localdb');
+//db = mongoose.createConnelocalhostction('mongodb:///localdb');
 
 
 // Application Configuration
@@ -180,8 +180,8 @@ apiRouter.use(function (req, res, next) {
 
 app.use('/api', apiRouter);
 
-app.listen(1337);
-console.log('Current port is: ' + 1337);
+app.listen(port);
+console.log('Current port is: ' + port);
 
 
 
